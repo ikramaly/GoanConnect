@@ -1,0 +1,68 @@
+const providers = [
+  {
+    id: 1,
+    name: 'Ramesh Kumar (Demo)',
+    category: 'Electrician',
+    village: 'Demo Village A',
+    phone: '+91 00000 00001',
+    available: true,
+  },
+  {
+    id: 2,
+    name: 'Sita Devi (Demo)',
+    category: 'Plumber',
+    village: 'Demo Village B',
+    phone: '+91 00000 00002',
+    available: true,
+  },
+  {
+    id: 3,
+    name: 'Mohan Lal (Demo)',
+    category: 'Tutor',
+    village: 'Demo Village C',
+    phone: '+91 00000 00003',
+    available: false,
+  },
+  {
+    id: 4,
+    name: 'Asha Kumari (Demo)',
+    category: 'Mechanic',
+    village: 'Demo Village D',
+    phone: '+91 00000 00004',
+    available: true,
+  },
+  {
+    id: 5,
+    name: 'Hari Prasad (Demo)',
+    category: 'Tailor',
+    village: 'Demo Village E',
+    phone: '+91 00000 00005',
+    available: false,
+  },
+  {
+    id: 6,
+    name: 'Kamla Bai (Demo)',
+    category: 'Tractor Service',
+    village: 'Demo Village F',
+    phone: '+91 00000 00006',
+    available: true,
+  },
+  {
+    id: 7,
+    name: 'Deepak Singh (Demo)',
+    category: 'Electrician',
+    village: 'Demo Village G',
+    phone: '+91 00000 00007',
+    available: false,
+  },
+  {
+    id: 8,
+    name: 'Pooja Sharma (Demo)',
+    category: 'Plumber',
+    village: 'Demo Village H',
+    phone: '+91 00000 00008',
+    available: true,
+  },
+]
+
+export default providers
