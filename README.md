@@ -1,16 +1,56 @@
-# React + Vite
+# 🌱 GaonConnect – Village Services Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GaonConnect is a responsive web application built to help people discover local village services, farmer assistance, and community announcements through a simple and user-friendly interface.
 
-Currently, two official plugins are available:
+## ✨ Features
+- **Responsive UI** – Works across desktop, tablet, and mobile screens.
+- **Service Directory** – Browse local services by category.
+- **Search & Filters** – Search providers by name and village.
+- **Kisan Sahayata** – Explore tractor rental, harvesting, seeds & fertilizer, and farming guidance.
+- **Village Notice Board** – View community announcements with category and village filters.
+- **Government Schemes** – Browse scheme information by category.
+- **Hindi & English** – Switch between languages.
+- **Authentication UI** – Sign In and Sign Up form designs.
+- **Reusable Components** – Consistent UI with reusable React components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- React.js
+- JavaScript
+- Tailwind CSS
+- HTML5
+- CSS3
+- React Router
+- React Icons
+- Vite
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**1. Clone the repository**
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
-## Expanding the ESLint configuration
+**2. Open the project folder**
+```bash
+cd GaonConnect
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**3. Install dependencies**
+```bash
+npm install
+```
+
+**4. Start the development server**
+```bash
+npm run dev
+```
+
+Open the local URL shown in your terminal.
+
+## 📌 Project Status
+Frontend project using mock data. Authentication and form submissions are UI demonstrations; backend integration is not included.
+
+## 👨‍💻 Developed By
+**Ikram Ali**
+
+Frontend development project built with React.js and Tailwind CSS.
