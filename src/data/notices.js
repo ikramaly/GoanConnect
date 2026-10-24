@@ -1,17 +1,177 @@
 // Example community notices for display; they are not current public announcements.
 const notices = [
-  { id: 'notice-electricity-haritpur-01', category: 'electricity', title: { en: 'Local power maintenance', hi: 'स्थानीय बिजली रखरखाव' }, description: { en: 'Example update: a planned daytime interruption near the market road would be shared here after confirmation by the local electricity office.', hi: 'उदाहरण सूचना: स्थानीय बिजली कार्यालय से पुष्टि के बाद बाज़ार मार्ग के पास दिन में बिजली बाधित होने की जानकारी यहाँ साझा की जाएगी।' }, village: 'Jogiya Khera', hindiVillage: 'जोगिया खेड़ा', date: '2026-10-20' },
-  { id: 'notice-electricity-neelgaon-01', category: 'electricity', title: { en: 'Streetlight inspection', hi: 'सड़क की लाइटों की जाँच' }, description: { en: 'Example update: residents may be informed when streetlights around the community centre are inspected.', hi: 'उदाहरण सूचना: सामुदायिक केंद्र के आसपास की सड़क लाइटों की जाँच की जानकारी निवासियों को दी जा सकती है।' }, village: 'Fathepur Kheri', hindiVillage: 'फतेहपुर खेरी', date: '2026-10-22' },
-  { id: 'notice-electricity-sonapur-01', category: 'electricity', title: { en: 'Electrical safety camp', hi: 'बिजली सुरक्षा शिविर' }, description: { en: 'Example announcement for a community session about safe household wiring and appliance use.', hi: 'घर की सुरक्षित वायरिंग और उपकरणों के उपयोग पर सामुदायिक सत्र की उदाहरण सूचना।' }, village: 'Fugana', hindiVillage: 'फुगाना', date: '2026-10-27' },
-  { id: 'notice-water-haritpur-01', category: 'water-supply', title: { en: 'Water tank cleaning', hi: 'पानी की टंकी की सफ़ाई' }, description: { en: 'Example update: a tank cleaning schedule and any expected supply interruption would be posted after confirmation.', hi: 'उदाहरण सूचना: टंकी की सफ़ाई का समय और संभावित आपूर्ति बाधा की जानकारी पुष्टि के बाद दी जाएगी।' }, village: 'Rajpur', hindiVillage: 'राजपुर', date: '2026-10-24' },
-  { id: 'notice-water-madhuban-01', category: 'water-supply', title: { en: 'Water supply timing', hi: 'जल आपूर्ति का समय' }, description: { en: 'Example reminder for sharing the confirmed morning supply window with residents.', hi: 'निवासियों के साथ पुष्टि किए गए सुबह के आपूर्ति समय को साझा करने की उदाहरण सूचना।' }, village: 'Chajpur', hindiVillage: 'छाजपुर', date: '2026-10-23' },
-  { id: 'notice-water-neelgaon-01', category: 'water-supply', title: { en: 'Pipeline repair update', hi: 'पाइपलाइन मरम्मत की जानकारी' }, description: { en: 'Example update about a short water interruption while a pipeline near the school crossing is repaired.', hi: 'स्कूल चौराहे के पास पाइपलाइन मरम्मत के दौरान थोड़े समय की जल बाधा की उदाहरण सूचना।' }, village: 'Parasoli', hindiVillage: 'परसौली', date: '2026-10-26' },
-  { id: 'notice-event-haritpur-01', category: 'community-events', title: { en: 'Community cleanliness drive', hi: 'सामुदायिक स्वच्छता अभियान' }, description: { en: 'Example invitation for neighbours to help clean the pond approach and collect litter safely.', hi: 'पड़ोसियों को तालाब के रास्ते की सफ़ाई और कचरा सुरक्षित ढंग से इकट्ठा करने के लिए उदाहरण आमंत्रण।' }, village: 'Joula', hindiVillage: 'जौला', date: '2026-10-25' },
-  { id: 'notice-event-sonapur-01', category: 'community-events', title: { en: 'Village sports afternoon', hi: 'गाँव में खेल गतिविधियाँ' }, description: { en: 'Example school-ground announcement for friendly games and activities for children and families.', hi: 'बच्चों और परिवारों के लिए मैत्रीपूर्ण खेल तथा गतिविधियों की स्कूल मैदान संबंधी उदाहरण सूचना।' }, village: 'Sakhawat Gadhi', hindiVillage: 'शाखावत गढ़ी', date: '2026-10-29' },
-  { id: 'notice-event-amberwadi-01', category: 'community-events', title: { en: 'Health and wellness camp', hi: 'स्वास्थ्य एवं कल्याण शिविर' }, description: { en: 'Example notice for a local health awareness camp; any date or venue should be confirmed with the organisers.', hi: 'स्थानीय स्वास्थ्य जागरूकता शिविर की उदाहरण सूचना; तारीख और स्थान आयोजकों से पुष्ट किए जाने चाहिए।' }, village: 'Loi', hindiVillage: 'लोई', date: '2026-10-31' },
-  { id: 'notice-general-neelgaon-01', category: 'general-announcements', title: { en: 'School parent meeting', hi: 'विद्यालय अभिभावक बैठक' }, description: { en: 'Example reminder that a school may share its parent meeting schedule through the village notice board.', hi: 'विद्यालय की अभिभावक बैठक का समय गाँव के सूचना पट्ट पर साझा करने की उदाहरण सूचना।' }, village: 'Bigana', hindiVillage: 'बिगाना', date: '2026-10-21' },
-  { id: 'notice-general-madhuban-01', category: 'general-announcements', title: { en: 'Community meeting', hi: 'सामुदायिक बैठक' }, description: { en: 'Example announcement for discussing local priorities such as water, roads, and cleanliness.', hi: 'पानी, सड़क और स्वच्छता जैसी स्थानीय प्राथमिकताओं पर चर्चा के लिए उदाहरण सूचना।' }, village: 'Teekri', hindiVillage: 'टीकरी', date: '2026-10-28' },
-  { id: 'notice-general-sonapur-01', category: 'general-announcements', title: { en: 'School admission information', hi: 'विद्यालय प्रवेश जानकारी' }, description: { en: 'Example reminder to contact the local school directly for current admission dates and required documents.', hi: 'वर्तमान प्रवेश तिथियों और आवश्यक दस्तावेज़ों के लिए स्थानीय विद्यालय से सीधे संपर्क करने की उदाहरण सूचना।' }, village: 'Bhabisa', hindiVillage: 'भविसा', date: '2026-10-30' },
+  { 
+    id: 'notice-electricity-haritpur-01', 
+    category: 'electricity', 
+    title: { 
+      en: 'Local power maintenance', 
+      hi: 'स्थानीय बिजली रखरखाव' }, 
+      description: { 
+        en: ' a planned daytime interruption near the market road would be shared here after confirmation by the local electricity office.', 
+        hi: 'उदाहरण सूचना: स्थानीय बिजली कार्यालय से पुष्टि के बाद बाज़ार मार्ग के पास दिन में बिजली बाधित होने की जानकारी यहाँ साझा की जाएगी।' 
+      },
+    village: 'Jogiya Khera', 
+    hindiVillage: 'जोगिया खेड़ा', 
+    date: '2026-10-20' 
+  },
+  { 
+    id: 'notice-electricity-neelgaon-01', 
+    category: 'electricity', 
+    title: { 
+      en: 'Streetlight inspection', 
+      hi: 'सड़क की लाइटों की जाँच' }, 
+      description: { 
+        en: 'Example update: residents may be informed when streetlights around the community centre are inspected.', 
+        hi: 'उदाहरण सूचना: सामुदायिक केंद्र के आसपास की सड़क लाइटों की जाँच की जानकारी निवासियों को दी जा सकती है।' 
+      }, 
+    village: 'Fathepur Kheri', 
+    hindiVillage: 'फतेहपुर खेरी', 
+    date: '2026-10-22' 
+  },
+  { 
+    id: 'notice-electricity-sonapur-01', 
+    category: 'electricity', 
+    title: { 
+      en: 'Electrical safety camp', 
+      hi: 'बिजली सुरक्षा शिविर' 
+    }, 
+    description: { 
+      en: 'Example announcement for a community session about safe household wiring and appliance use.', 
+      hi: 'घर की सुरक्षित वायरिंग और उपकरणों के उपयोग पर सामुदायिक सत्र की उदाहरण सूचना।' }, 
+      village: 'Fugana', 
+      hindiVillage: 'फुगाना', 
+      date: '2026-10-27' 
+    },
+  { 
+    id: 'notice-water-haritpur-01', 
+    category: 'water-supply', 
+    title: { 
+      en: 'Water tank cleaning', 
+      hi: 'पानी की टंकी की सफ़ाई'
+    }, 
+    description: { 
+      en: 'Example update: a tank cleaning schedule and any expected supply interruption would be posted after confirmation.', 
+      hi: 'उदाहरण सूचना: टंकी की सफ़ाई का समय और संभावित आपूर्ति बाधा की जानकारी पुष्टि के बाद दी जाएगी।' 
+    }, 
+    village: 'Rajpur', 
+    hindiVillage: 'राजपुर', 
+    date: '2026-10-24' },
+  { 
+    id: 'notice-water-madhuban-01', 
+    category: 'water-supply', 
+    title: {
+      en: 'Water supply timing', 
+      hi: 'जल आपूर्ति का समय' 
+    }, 
+    description: { 
+      en: 'Example reminder for sharing the confirmed morning supply window with residents.', 
+      hi: 'निवासियों के साथ पुष्टि किए गए सुबह के आपूर्ति समय को साझा करने की उदाहरण सूचना।' 
+    }, 
+    village: 'Chajpur', 
+    hindiVillage: 'छाजपुर', 
+    date: '2026-10-23' 
+  },
+  { 
+    id: 'notice-water-neelgaon-01', 
+    category: 'water-supply', 
+    title: { 
+      en: 'Pipeline repair update', 
+      hi: 'पाइपलाइन मरम्मत की जानकारी' 
+    }, 
+    description: { 
+      en: 'Example update about a short water interruption while a pipeline near the school crossing is repaired.', 
+      hi: 'स्कूल चौराहे के पास पाइपलाइन मरम्मत के दौरान थोड़े समय की जल बाधा की उदाहरण सूचना।' 
+    }, 
+    village: 'Parasoli', 
+    hindiVillage: 'परसौली', 
+    date: '2026-10-26' 
+  },
+  { 
+    id: 'notice-event-haritpur-01', 
+    category: 'community-events', 
+    title: { 
+      en: 'Community cleanliness drive', 
+      hi: 'सामुदायिक स्वच्छता अभियान' 
+    }, 
+    description: { 
+      en: 'Example invitation for neighbours to help clean the pond approach and collect litter safely.', 
+      hi: 'पड़ोसियों को तालाब के रास्ते की सफ़ाई और कचरा सुरक्षित ढंग से इकट्ठा करने के लिए उदाहरण आमंत्रण।' 
+    }, 
+    village: 'Joula', 
+    hindiVillage: 'जौला', 
+    date: '2026-10-25' 
+  },
+  { 
+    id: 'notice-event-sonapur-01', 
+    category: 'community-events', 
+    title: { 
+      en: 'Village sports afternoon', 
+      hi: 'गाँव में खेल गतिविधियाँ' 
+    }, 
+    description: { 
+      en: 'Example school-ground announcement for friendly games and activities for children and families.', 
+      hi: 'बच्चों और परिवारों के लिए मैत्रीपूर्ण खेल तथा गतिविधियों की स्कूल मैदान संबंधी उदाहरण सूचना।' }, 
+      village: 'Sakhawat Gadhi', 
+      hindiVillage: 'शाखावत गढ़ी', 
+      date: '2026-10-29' 
+  },
+  { 
+    id: 'notice-event-amberwadi-01', 
+    category: 'community-events', 
+    title: { 
+      en: 'Health and wellness camp', 
+      hi: 'स्वास्थ्य एवं कल्याण शिविर' 
+    }, 
+    description: { 
+      en: 'Example notice for a local health awareness camp; any date or venue should be confirmed with the organisers.', hi: 'स्थानीय स्वास्थ्य जागरूकता शिविर की उदाहरण सूचना; तारीख और स्थान आयोजकों से पुष्ट किए जाने चाहिए।' 
+    }, 
+    village: 'Loi', 
+    hindiVillage: 'लोई', 
+    date: '2026-10-31' 
+  },
+  { 
+    id: 'notice-general-neelgaon-01', 
+    category: 'general-announcements', 
+    title: { 
+      en: 'School parent meeting', 
+      hi: 'विद्यालय अभिभावक बैठक' 
+    }, 
+    description: { 
+      en: 'Example reminder that a school may share its parent meeting schedule through the village notice board.', 
+      hi: 'विद्यालय की अभिभावक बैठक का समय गाँव के सूचना पट्ट पर साझा करने की उदाहरण सूचना।' 
+    }, 
+    village: 'Bigana', 
+    hindiVillage: 'बिगाना', 
+    date: '2026-10-21' 
+  },
+  { 
+    id: 'notice-general-madhuban-01', 
+    category: 'general-announcements', 
+    title: { 
+      en: 'Community meeting', 
+      hi: 'सामुदायिक बैठक' }, 
+      description: { 
+        en: 'Example announcement for discussing local priorities such as water, roads, and cleanliness.', 
+        hi: 'पानी, सड़क और स्वच्छता जैसी स्थानीय प्राथमिकताओं पर चर्चा के लिए उदाहरण सूचना।' 
+      }, 
+      village: 'Teekri', 
+      hindiVillage: 'टीकरी', 
+      date: '2026-10-28' },
+  { 
+    id: 'notice-general-sonapur-01', 
+    category: 'general-announcements', 
+    title: { 
+      en: 'School admission information', 
+      hi: 'विद्यालय प्रवेश जानकारी' 
+    }, 
+    description: { 
+      en: 'Example reminder to contact the local school directly for current admission dates and required documents.', 
+      hi: 'वर्तमान प्रवेश तिथियों और आवश्यक दस्तावेज़ों के लिए स्थानीय विद्यालय से सीधे संपर्क करने की उदाहरण सूचना।' 
+    }, 
+    village: 'Bhabisa', 
+    hindiVillage: 'भविसा', 
+    date: '2026-10-30' 
+  },
 ]
 
 export default notices

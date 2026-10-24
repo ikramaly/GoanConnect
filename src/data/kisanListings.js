@@ -2,225 +2,666 @@
 const kisanListings = [
   // Tractor rental
   {
-    id: 'tractor-rental-illustrative-a', 
+    id: 'tractor-rental-illustrative-a',
     category: 'tractor-rental',
-    providerName: 'Hari Tractor Hire', 
+    providerName: 'Hari Tractor Hire',
     hindiProviderName: 'हरि ट्रैक्टर किराया',
-    village: 'Jogiya Khera', 
-    hindiVillage: 'जोगिया खेड़ा', 
-    available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 7346271805', email: 'tractor01@example.com' },
-    details: { 
-      brand: 'Mahindra ', 
-      model: '575 DI ', 
+    village: 'Jogiya Khera',
+    hindiVillage: 'जोगिया खेड़ा',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 7346271805',
+      email: 'tractor01@example.com'
+    },
+    details: {
+      brand: 'Mahindra ',
+      model: '575 DI ',
       horsepower: 45,
-      rate: { 
-        en: '₹650 per hour (illustrative rate)', 
-        hi: '₹650 प्रति घंटा (केवल उदाहरण दर)' 
+      rate: {
+        en: '₹650 per hour (illustrative rate)',
+        hi: '₹650 प्रति घंटा (केवल उदाहरण दर)'
       },
       driverAvailable: true,
-      equipment: { 
-        en: 'Rotavator and cultivator (farm equipment)', 
-        hi: 'रोटावेटर और कल्टीवेटर (उदाहरण उपकरण)' 
-      } 
+      equipment: {
+        en: 'Rotavator and cultivator (farm equipment)',
+        hi: 'रोटावेटर और कल्टीवेटर (उदाहरण उपकरण)'
+      }
+    }
+  },
+  {
+    id: 'tractor-rental-illustrative-b',
+    category: 'tractor-rental',
+    providerName: 'GreenField Tractor Rental',
+    hindiProviderName: 'ग्रीनफील्ड ट्रैक्टर किराया',
+    village: 'Fathepur Kheri',
+    hindiVillage: 'फतेहपुर खेरी',
+    available: false,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 8346271806',
+      email: 'tractor02@example.com'
     },
-  },
-  {
-    id: 'tractor-rental-illustrative-b', category: 'tractor-rental',
-    providerName: 'GreenField Tractor Rental', hindiProviderName: 'ग्रीनफील्ड ट्रैक्टर किराया',
-    village: 'Fathepur Kheri', hindiVillage: 'फतेहपुर खेरी', available: false, isIllustrative: true,
-    contactDetails: { phone: '+91 8346271806', email: 'tractor02@example.com' },
-    details: { brand: 'Swaraj ', model: '744 FE ', horsepower: 48,
-      rate: { en: '₹700 per hour (illustrative rate)', hi: '₹700 प्रति घंटा (केवल उदाहरण दर)' },
+    details: {
+      brand: 'Swaraj ',
+      model: '744 FE ',
+      horsepower: 48,
+      rate: {
+        en: '₹700 per hour (illustrative rate)',
+        hi: '₹700 प्रति घंटा (केवल उदाहरण दर)'
+      },
       driverAvailable: false,
-      equipment: { en: 'Trailer and disc harrow (farm equipment)', hi: 'ट्रेलर और डिस्क हैरो (उदाहरण उपकरण)' } },
+      equipment: {
+        en: 'Trailer and disc harrow (farm equipment)',
+        hi: 'ट्रेलर और डिस्क हैरो (उदाहरण उपकरण)'
+      }
+    }
   },
   {
-    id: 'tractor-rental-illustrative-c', category: 'tractor-rental',
-    providerName: 'KhetMitra Tractor Service', hindiProviderName: 'खेतमित्र ट्रैक्टर सेवा',
-    village: 'Fugana', hindiVillage: 'फुगाना', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 9346271807', email: 'tractor03@example.com' },
-    details: { brand: 'John Deere ', model: '5050 D ', horsepower: 50,
-      rate: { en: '₹900 per acre (illustrative rate)', hi: '₹900 प्रति एकड़ (केवल उदाहरण दर)' },
+    id: 'tractor-rental-illustrative-c',
+    category: 'tractor-rental',
+    providerName: 'KhetMitra Tractor Service',
+    hindiProviderName: 'खेतमित्र ट्रैक्टर सेवा',
+    village: 'Fugana',
+    hindiVillage: 'फुगाना',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 9346271807',
+      email: 'tractor03@example.com'
+    },
+    details: {
+      brand: 'John Deere ',
+      model: '5050 D ',
+      horsepower: 50,
+      rate: {
+        en: '₹900 per acre (illustrative rate)',
+        hi: '₹900 प्रति एकड़ (केवल उदाहरण दर)'
+      },
       driverAvailable: true,
-      equipment: { en: 'Rotavator and seed drill (farm equipment)', hi: 'रोटावेटर और सीड ड्रिल (उदाहरण उपकरण)' } },
+      equipment: {
+        en: 'Rotavator and seed drill (farm equipment)',
+        hi: 'रोटावेटर और सीड ड्रिल (उदाहरण उपकरण)'
+      }
+    }
   },
   {
-    id: 'tractor-rental-illustrative-d', category: 'tractor-rental',
-    providerName: 'SoilSide Tractor Hire', hindiProviderName: 'सॉइलसाइड ट्रैक्टर किराया',
-    village: 'Rajpur', hindiVillage: 'राजपुर', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 7346271808', email: 'tractor04@example.com' },
-    details: { brand: 'Farmtrac ', model: '45 Classic ', horsepower: 45,
-      rate: { en: '₹680 per hour (illustrative rate)', hi: '₹680 प्रति घंटा (केवल उदाहरण दर)' },
+    id: 'tractor-rental-illustrative-d',
+    category: 'tractor-rental',
+    providerName: 'SoilSide Tractor Hire',
+    hindiProviderName: 'सॉइलसाइड ट्रैक्टर किराया',
+    village: 'Rajpur',
+    hindiVillage: 'राजपुर',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 7346271808',
+      email: 'tractor04@example.com'
+    },
+    details: {
+      brand: 'Farmtrac ',
+      model: '45 Classic ',
+      horsepower: 45,
+      rate: {
+        en: '₹680 per hour (illustrative rate)',
+        hi: '₹680 प्रति घंटा (केवल उदाहरण दर)'
+      },
       driverAvailable: false,
-      equipment: { en: 'Cultivator and trolley (farm equipment)', hi: 'कल्टीवेटर और ट्रॉली (उदाहरण उपकरण)' } },
+      equipment: {
+        en: 'Cultivator and trolley (farm equipment)',
+        hi: 'कल्टीवेटर और ट्रॉली (उदाहरण उपकरण)'
+      }
+    }
   },
   {
-    id: 'tractor-rental-illustrative-e', category: 'tractor-rental',
-    providerName: 'FieldRoute Tractor Rental', hindiProviderName: 'फील्डरूट ट्रैक्टर किराया',
-    village: 'Chajpur', hindiVillage: 'छाजपुर', available: false, isIllustrative: true,
-    contactDetails: { phone: '+91 8346271809', email: 'tractor05@example.com' },
-    details: { brand: 'New Holland ', model: '3630 TX ', horsepower: 50,
-      rate: { en: '₹850 per acre (illustrative rate)', hi: '₹850 प्रति एकड़ (केवल उदाहरण दर)' },
+    id: 'tractor-rental-illustrative-e',
+    category: 'tractor-rental',
+    providerName: 'FieldRoute Tractor Rental',
+    hindiProviderName: 'फील्डरूट ट्रैक्टर किराया',
+    village: 'Chajpur',
+    hindiVillage: 'छाजपुर',
+    available: false,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 8346271809',
+      email: 'tractor05@example.com'
+    },
+    details: {
+      brand: 'New Holland ',
+      model: '3630 TX ',
+      horsepower: 50,
+      rate: {
+        en: '₹850 per acre (illustrative rate)',
+        hi: '₹850 प्रति एकड़ (केवल उदाहरण दर)'
+      },
       driverAvailable: true,
-      equipment: { en: 'Rotavator and plough (farm equipment)', hi: 'रोटावेटर और हल (उदाहरण उपकरण)' } },
+      equipment: {
+        en: 'Rotavator and plough (farm equipment)',
+        hi: 'रोटावेटर और हल (उदाहरण उपकरण)'
+      }
+    }
   },
 
   // Harvesting services
   {
-    id: 'harvesting-illustrative-a', category: 'harvesting',
-    providerName: 'GoldenRow Harvesting', hindiProviderName: 'गोल्डनरो कटाई सेवा',
-    village: 'Parasoli', hindiVillage: 'परसौली', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 9346271810', email: 'harvest01@example.com' },
-    details: { machineType: { en: 'Combine harvester', hi: 'कंबाइन हार्वेस्टर (उदाहरण)' },
-      crops: { en: 'Wheat, rice', hi: 'गेहूँ, धान' },
-      rate: { en: '₹1,800 per acre (illustrative rate)', hi: '₹1,800 प्रति एकड़ (केवल उदाहरण दर)' },
-      operatorAvailable: true },
+    id: 'harvesting-illustrative-a',
+    category: 'harvesting',
+    providerName: 'GoldenRow Harvesting',
+    hindiProviderName: 'गोल्डनरो कटाई सेवा',
+    village: 'Parasoli',
+    hindiVillage: 'परसौली',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 9346271810',
+      email: 'harvest01@example.com'
+    },
+    details: {
+      machineType: {
+        en: 'Combine harvester',
+        hi: 'कंबाइन हार्वेस्टर (उदाहरण)'
+      },
+      crops: {
+        en: 'Wheat, rice',
+        hi: 'गेहूँ, धान'
+      },
+      rate: {
+        en: '₹1,800 per acre (illustrative rate)',
+        hi: '₹1,800 प्रति एकड़ (केवल उदाहरण दर)'
+      },
+      operatorAvailable: true
+    }
   },
   {
-    id: 'harvesting-illustrative-b', category: 'harvesting',
-    providerName: 'HarvestCircle Services', hindiProviderName: 'हार्वेस्टसर्कल सेवा',
-    village: 'Joula', hindiVillage: 'जौला', available: false, isIllustrative: true,
-    contactDetails: { phone: '+91 7346271811', email: 'harvest02@example.com' },
-    details: { machineType: { en: 'Reaper binder', hi: 'रीपर बाइंडर (उदाहरण)' },
-      crops: { en: 'Wheat, barley', hi: 'गेहूँ, जौ' },
-      rate: { en: '₹1,250 per acre (illustrative rate)', hi: '₹1,250 प्रति एकड़ (केवल उदाहरण दर)' },
-      operatorAvailable: true },
+    id: 'harvesting-illustrative-b',
+    category: 'harvesting',
+    providerName: 'HarvestCircle Services',
+    hindiProviderName: 'हार्वेस्टसर्कल सेवा',
+    village: 'Joula',
+    hindiVillage: 'जौला',
+    available: false,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 7346271811',
+      email: 'harvest02@example.com'
+    },
+    details: {
+      machineType: {
+        en: 'Reaper binder',
+        hi: 'रीपर बाइंडर (उदाहरण)'
+      },
+      crops: {
+        en: 'Wheat, barley',
+        hi: 'गेहूँ, जौ'
+      },
+      rate: {
+        en: '₹1,250 per acre (illustrative rate)',
+        hi: '₹1,250 प्रति एकड़ (केवल उदाहरण दर)'
+      },
+      operatorAvailable: true
+    }
   },
   {
-    id: 'harvesting-illustrative-c', category: 'harvesting',
-    providerName: 'CropCare Harvest Team', hindiProviderName: 'क्रॉपकेयर कटाई टीम',
-    village: 'Sakhawat Gadhi', hindiVillage: 'शाखावत गढ़ी', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 8346271812', email: 'harvest03@example.com' },
-    details: { machineType: { en: 'Mini combine harvester', hi: 'मिनी कंबाइन हार्वेस्टर (उदाहरण)' },
-      crops: { en: 'Rice, millet', hi: 'धान, बाजरा' },
-      rate: { en: '₹1,600 per acre (illustrative rate)', hi: '₹1,600 प्रति एकड़ (केवल उदाहरण दर)' },
-      operatorAvailable: false },
+    id: 'harvesting-illustrative-c',
+    category: 'harvesting',
+    providerName: 'CropCare Harvest Team',
+    hindiProviderName: 'क्रॉपकेयर कटाई टीम',
+    village: 'Sakhawat Gadhi',
+    hindiVillage: 'शाखावत गढ़ी',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 8346271812',
+      email: 'harvest03@example.com'
+    },
+    details: {
+      machineType: {
+        en: 'Mini combine harvester',
+        hi: 'मिनी कंबाइन हार्वेस्टर (उदाहरण)'
+      },
+      crops: {
+        en: 'Rice, millet',
+        hi: 'धान, बाजरा'
+      },
+      rate: {
+        en: '₹1,600 per acre (illustrative rate)',
+        hi: '₹1,600 प्रति एकड़ (केवल उदाहरण दर)'
+      },
+      operatorAvailable: false
+    }
   },
   {
-    id: 'harvesting-illustrative-d', category: 'harvesting',
-    providerName: 'Sunehri Fasal Works', hindiProviderName: 'सुनहरी फसल सेवा',
-    village: 'Loi', hindiVillage: 'लोई', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 9346271813', email: 'harvest04@example.com' },
-    details: { machineType: { en: 'Corn harvester', hi: 'मक्का हार्वेस्टर (उदाहरण)' },
-      crops: { en: 'Maize', hi: 'मक्का' },
-      rate: { en: '₹1,450 per acre (illustrative rate)', hi: '₹1,450 प्रति एकड़ (केवल उदाहरण दर)' },
-      operatorAvailable: true },
+    id: 'harvesting-illustrative-d',
+    category: 'harvesting',
+    providerName: 'Sunehri Fasal Works',
+    hindiProviderName: 'सुनहरी फसल सेवा',
+    village: 'Loi',
+    hindiVillage: 'लोई',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 9346271813',
+      email: 'harvest04@example.com'
+    },
+    details: {
+      machineType: {
+        en: 'Corn harvester',
+        hi: 'मक्का हार्वेस्टर (उदाहरण)'
+      },
+      crops: {
+        en: 'Maize',
+        hi: 'मक्का'
+      },
+      rate: {
+        en: '₹1,450 per acre (illustrative rate)',
+        hi: '₹1,450 प्रति एकड़ (केवल उदाहरण दर)'
+      },
+      operatorAvailable: true
+    }
   },
   {
-    id: 'harvesting-illustrative-e', category: 'harvesting',
-    providerName: 'KisanCut Field Service', hindiProviderName: 'किसानकट खेत सेवा',
-    village: 'Bigana', hindiVillage: 'बिगाना', available: false, isIllustrative: true,
-    contactDetails: { phone: '+91 7346271814', email: 'harvest05@example.com' },
-    details: { machineType: { en: 'Straw reaper', hi: 'स्ट्रॉ रीपर (उदाहरण)' },
-      crops: { en: 'Wheat, rice residue', hi: 'गेहूँ, धान का अवशेष' },
-      rate: { en: '₹950 per acre (illustrative rate)', hi: '₹950 प्रति एकड़ (केवल उदाहरण दर)' },
-      operatorAvailable: false },
+    id: 'harvesting-illustrative-e',
+    category: 'harvesting',
+    providerName: 'KisanCut Field Service',
+    hindiProviderName: 'किसानकट खेत सेवा',
+    village: 'Bigana',
+    hindiVillage: 'बिगाना',
+    available: false,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 7346271814',
+      email: 'harvest05@example.com'
+    },
+    details: {
+      machineType: {
+        en: 'Straw reaper',
+        hi: 'स्ट्रॉ रीपर (उदाहरण)'
+      },
+      crops: {
+        en: 'Wheat, rice residue',
+        hi: 'गेहूँ, धान का अवशेष'
+      },
+      rate: {
+        en: '₹950 per acre (illustrative rate)',
+        hi: '₹950 प्रति एकड़ (केवल उदाहरण दर)'
+      },
+      operatorAvailable: false
+    }
   },
 
   // Seeds and fertilizer shops
   {
-    id: 'seeds-fertilizer-illustrative-a', category: 'seeds-fertilizer',
-    providerName: 'MittiMitra Farm Shop', hindiProviderName: 'मिट्टीमित्र कृषि दुकान',
-    village: 'Teekri', hindiVillage: 'टीकरी', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 8346271815', email: 'farmshop01@example.com' },
-    details: { products: [
-      { name: 'Wheat seed packet', hindiName: 'गेहूँ बीज पैकेट', productCategory: { en: 'Seed', hi: 'बीज' }, price: { en: '₹480 per 10 kg (illustrative price)', hi: '₹480 प्रति 10 किलो (केवल उदाहरण कीमत)' } },
-      { name: 'Organic compost bag', hindiName: 'जैविक खाद की बोरी', productCategory: { en: 'Fertilizer', hi: 'उर्वरक' }, price: { en: '₹320 per 25 kg (illustrative price)', hi: '₹320 प्रति 25 किलो (केवल उदाहरण कीमत)' } },
-    ] },
+    id: 'seeds-fertilizer-illustrative-a',
+    category: 'seeds-fertilizer',
+    providerName: 'MittiMitra Farm Shop',
+    hindiProviderName: 'मिट्टीमित्र कृषि दुकान',
+    village: 'Teekri',
+    hindiVillage: 'टीकरी',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 8346271815',
+      email: 'farmshop01@example.com'
+    },
+    details: {
+      products: [
+        {
+          name: 'Wheat seed packet',
+          hindiName: 'गेहूँ बीज पैकेट',
+          productCategory: {
+            en: 'Seed',
+            hi: 'बीज'
+          },
+          price: {
+            en: '₹480 per 10 kg (illustrative price)',
+            hi: '₹480 प्रति 10 किलो (केवल उदाहरण कीमत)'
+          }
+        },
+        {
+          name: 'Organic compost bag',
+          hindiName: 'जैविक खाद की बोरी',
+          productCategory: {
+            en: 'Fertilizer',
+            hi: 'उर्वरक'
+          },
+          price: {
+            en: '₹320 per 25 kg (illustrative price)',
+            hi: '₹320 प्रति 25 किलो (केवल उदाहरण कीमत)'
+          }
+        }
+      ]
+    }
   },
   {
-    id: 'seeds-fertilizer-illustrative-b', category: 'seeds-fertilizer',
-    providerName: 'BeejBhandar Shop', hindiProviderName: 'बीजभंडार दुकान',
-    village: 'Bhabisa', hindiVillage: 'भविसा', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 9346271816', email: 'farmshop02@example.com' },
-    details: { products: [
-      { name: 'Rice seed packet', hindiName: 'धान बीज पैकेट', productCategory: { en: 'Seed', hi: 'बीज' }, price: { en: '₹560 per 10 kg (illustrative price)', hi: '₹560 प्रति 10 किलो (केवल उदाहरण कीमत)' } },
-      { name: 'Neem-based soil mix', hindiName: 'नीम आधारित मिट्टी मिश्रण', productCategory: { en: 'Soil care', hi: 'मृदा देखभाल' }, price: { en: '₹260 per 5 kg (illustrative price)', hi: '₹260 प्रति 5 किलो (केवल उदाहरण कीमत)' } },
-    ] },
+    id: 'seeds-fertilizer-illustrative-b',
+    category: 'seeds-fertilizer',
+    providerName: 'BeejBhandar Shop',
+    hindiProviderName: 'बीजभंडार दुकान',
+    village: 'Bhabisa',
+    hindiVillage: 'भविसा',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 9346271816',
+      email: 'farmshop02@example.com'
+    },
+    details: {
+      products: [
+        {
+          name: 'Rice seed packet',
+          hindiName: 'धान बीज पैकेट',
+          productCategory: {
+            en: 'Seed',
+            hi: 'बीज'
+          },
+          price: {
+            en: '₹560 per 10 kg (illustrative price)',
+            hi: '₹560 प्रति 10 किलो (केवल उदाहरण कीमत)'
+          }
+        },
+        {
+          name: 'Neem-based soil mix',
+          hindiName: 'नीम आधारित मिट्टी मिश्रण',
+          productCategory: {
+            en: 'Soil care',
+            hi: 'मृदा देखभाल'
+          },
+          price: {
+            en: '₹260 per 5 kg (illustrative price)',
+            hi: '₹260 प्रति 5 किलो (केवल उदाहरण कीमत)'
+          }
+        }
+      ]
+    }
   },
   {
-    id: 'seeds-fertilizer-illustrative-c', category: 'seeds-fertilizer',
-    providerName: 'KhetSathi Agri Store', hindiProviderName: 'खेतसाथी कृषि स्टोर',
-    village: 'Doonger', hindiVillage: 'डुंगर', available: false, isIllustrative: true,
-    contactDetails: { phone: '+91 7346271817', email: 'farmshop03@example.com' },
-    details: { products: [
-      { name: 'Maize seed packet', hindiName: 'मक्का बीज पैकेट', productCategory: { en: 'Seed', hi: 'बीज' }, price: { en: '₹390 per 5 kg (illustrative price)', hi: '₹390 प्रति 5 किलो (केवल उदाहरण कीमत)' } },
-      { name: 'Vermicompost bag', hindiName: 'वर्मीकम्पोस्ट की बोरी', productCategory: { en: 'Fertilizer', hi: 'उर्वरक' }, price: { en: '₹350 per 25 kg (illustrative price)', hi: '₹350 प्रति 25 किलो (केवल उदाहरण कीमत)' } },
-    ] },
+    id: 'seeds-fertilizer-illustrative-c',
+    category: 'seeds-fertilizer',
+    providerName: 'KhetSathi Agri Store',
+    hindiProviderName: 'खेतसाथी कृषि स्टोर',
+    village: 'Doonger',
+    hindiVillage: 'डुंगर',
+    available: false,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 7346271817',
+      email: 'farmshop03@example.com'
+    },
+    details: {
+      products: [
+        {
+          name: 'Maize seed packet',
+          hindiName: 'मक्का बीज पैकेट',
+          productCategory: {
+            en: 'Seed',
+            hi: 'बीज'
+          },
+          price: {
+            en: '₹390 per 5 kg (illustrative price)',
+            hi: '₹390 प्रति 5 किलो (केवल उदाहरण कीमत)'
+          }
+        },
+        {
+          name: 'Vermicompost bag',
+          hindiName: 'वर्मीकम्पोस्ट की बोरी',
+          productCategory: {
+            en: 'Fertilizer',
+            hi: 'उर्वरक'
+          },
+          price: {
+            en: '₹350 per 25 kg (illustrative price)',
+            hi: '₹350 प्रति 25 किलो (केवल उदाहरण कीमत)'
+          }
+        }
+      ]
+    }
   },
   {
-    id: 'seeds-fertilizer-illustrative-d', category: 'seeds-fertilizer',
-    providerName: 'DhartiDeep Farm Supplies', hindiProviderName: 'धरतीदीप कृषि सामग्री',
-    village: 'Kalyanpur', hindiVillage: 'कल्याणपुर', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 8346271818', email: 'farmshop04@example.com' },
-    details: { products: [
-      { name: 'Mustard seed packet', hindiName: 'सरसों बीज पैकेट', productCategory: { en: 'Seed', hi: 'बीज' }, price: { en: '₹620 per 10 kg (illustrative price)', hi: '₹620 प्रति 10 किलो (केवल उदाहरण कीमत)' } },
-      { name: 'Bio-fertilizer pack', hindiName: 'जैव उर्वरक पैक', productCategory: { en: 'Fertilizer', hi: 'उर्वरक' }, price: { en: '₹180 per pack (illustrative price)', hi: '₹180 प्रति पैक (केवल उदाहरण कीमत)' } },
-    ] },
+    id: 'seeds-fertilizer-illustrative-d',
+    category: 'seeds-fertilizer',
+    providerName: 'DhartiDeep Farm Supplies',
+    hindiProviderName: 'धरतीदीप कृषि सामग्री',
+    village: 'Kalyanpur',
+    hindiVillage: 'कल्याणपुर',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 8346271818',
+      email: 'farmshop04@example.com'
+    },
+    details: {
+      products: [
+        {
+          name: 'Mustard seed packet',
+          hindiName: 'सरसों बीज पैकेट',
+          productCategory: {
+            en: 'Seed',
+            hi: 'बीज'
+          },
+          price: {
+            en: '₹620 per 10 kg (illustrative price)',
+            hi: '₹620 प्रति 10 किलो (केवल उदाहरण कीमत)'
+          }
+        },
+        {
+          name: 'Bio-fertilizer pack',
+          hindiName: 'जैव उर्वरक पैक',
+          productCategory: {
+            en: 'Fertilizer',
+            hi: 'उर्वरक'
+          },
+          price: {
+            en: '₹180 per pack (illustrative price)',
+            hi: '₹180 प्रति पैक (केवल उदाहरण कीमत)'
+          }
+        }
+      ]
+    }
   },
   {
-    id: 'seeds-fertilizer-illustrative-e', category: 'seeds-fertilizer',
-    providerName: 'FasalBasket Shop', hindiProviderName: 'फसल बास्केट दुकान',
-    village: 'Budhana', hindiVillage: 'बुढाना', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 9346271819', email: 'farmshop05@example.com' },
-    details: { products: [
-      { name: 'Pigeon pea seed packet', hindiName: 'अरहर बीज पैकेट', productCategory: { en: 'Seed', hi: 'बीज' }, price: { en: '₹430 per 5 kg (illustrative price)', hi: '₹430 प्रति 5 किलो (केवल उदाहरण कीमत)' } },
-      { name: 'Neem cake fertilizer', hindiName: 'नीम खली उर्वरक', productCategory: { en: 'Fertilizer', hi: 'उर्वरक' }, price: { en: '₹410 per 25 kg (illustrative price)', hi: '₹410 प्रति 25 किलो (केवल उदाहरण कीमत)' } },
-    ] },
+    id: 'seeds-fertilizer-illustrative-e',
+    category: 'seeds-fertilizer',
+    providerName: 'FasalBasket Shop',
+    hindiProviderName: 'फसल बास्केट दुकान',
+    village: 'Budhana',
+    hindiVillage: 'बुढाना',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 9346271819',
+      email: 'farmshop05@example.com'
+    },
+    details: {
+      products: [
+        {
+          name: 'Pigeon pea seed packet',
+          hindiName: 'अरहर बीज पैकेट',
+          productCategory: {
+            en: 'Seed',
+            hi: 'बीज'
+          },
+          price: {
+            en: '₹430 per 5 kg (illustrative price)',
+            hi: '₹430 प्रति 5 किलो (केवल उदाहरण कीमत)'
+          }
+        },
+        {
+          name: 'Neem cake fertilizer',
+          hindiName: 'नीम खली उर्वरक',
+          productCategory: {
+            en: 'Fertilizer',
+            hi: 'उर्वरक'
+          },
+          price: {
+            en: '₹410 per 25 kg (illustrative price)',
+            hi: '₹410 प्रति 25 किलो (केवल उदाहरण कीमत)'
+          }
+        }
+      ]
+    }
   },
 
   // Kisan guidance
   {
-    id: 'kisan-guidance-illustrative-a', category: 'kisan-guidance',
-    providerName: 'Ananya Crop Guidance', hindiProviderName: 'अनन्या फसल मार्गदर्शन',
-    village: 'Kalyanpur', hindiVillage: 'कल्याणपुर', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 7346271820', email: 'guidance01@example.com' },
-    details: { topics: { en: 'Soil health, crop rotation', hi: 'मिट्टी का स्वास्थ्य, फसल चक्र' },
-      crops: { en: 'Wheat, chickpea', hi: 'गेहूँ, चना' },
-      description: { en: 'Seasonal crop planning based on local sowing windows and crop rotation.', hi: 'मौसम के अनुसार फसल योजना पर उदाहरण मार्गदर्शन।' },
-      consultation: { en: 'phone consultation', hi: 'फोन परामर्श' } },
+    id: 'kisan-guidance-illustrative-a',
+    category: 'kisan-guidance',
+    providerName: 'Ananya Crop Guidance',
+    hindiProviderName: 'अनन्या फसल मार्गदर्शन',
+    village: 'Kalyanpur',
+    hindiVillage: 'कल्याणपुर',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 7346271820',
+      email: 'guidance01@example.com'
+    },
+    details: {
+      topics: {
+        en: 'Soil health, crop rotation',
+        hi: 'मिट्टी का स्वास्थ्य, फसल चक्र'
+      },
+      crops: {
+        en: 'Wheat, chickpea',
+        hi: 'गेहूँ, चना'
+      },
+      description: {
+        en: 'Seasonal crop planning based on local sowing windows and crop rotation.',
+        hi: 'मौसम के अनुसार फसल योजना पर उदाहरण मार्गदर्शन।'
+      },
+      consultation: {
+        en: 'phone consultation',
+        hi: 'फोन परामर्श'
+      }
+    }
   },
   {
-    id: 'kisan-guidance-illustrative-b', category: 'kisan-guidance',
-    providerName: 'GramGrow Advisory', hindiProviderName: 'ग्रामग्रो सलाह सेवा',
-    village: 'Shahpur', hindiVillage: 'शाहपुर', available: false, isIllustrative: true,
-    contactDetails: { phone: '+91 8346271821', email: 'guidance02@example.com' },
-    details: { topics: { en: 'Water management, pest monitoring', hi: 'जल प्रबंधन, कीट निगरानी' },
-      crops: { en: 'Rice, vegetables', hi: 'धान, सब्ज़ियाँ' },
-      description: { en: 'Practical irrigation scheduling and routine crop observation guidance.', hi: 'सिंचाई योजना और फसल निरीक्षण के लिए उदाहरण सलाह।' },
-      consultation: { en: 'video consultation', hi: 'वीडियो परामर्श' } },
+    id: 'kisan-guidance-illustrative-b',
+    category: 'kisan-guidance',
+    providerName: 'GramGrow Advisory',
+    hindiProviderName: 'ग्रामग्रो सलाह सेवा',
+    village: 'Shahpur',
+    hindiVillage: 'शाहपुर',
+    available: false,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 8346271821',
+      email: 'guidance02@example.com'
+    },
+    details: {
+      topics: {
+        en: 'Water management, pest monitoring',
+        hi: 'जल प्रबंधन, कीट निगरानी'
+      },
+      crops: {
+        en: 'Rice, vegetables',
+        hi: 'धान, सब्ज़ियाँ'
+      },
+      description: {
+        en: 'Practical irrigation scheduling and routine crop observation guidance.',
+        hi: 'सिंचाई योजना और फसल निरीक्षण के लिए उदाहरण सलाह।'
+      },
+      consultation: {
+        en: 'video consultation',
+        hi: 'वीडियो परामर्श'
+      }
+    }
   },
   {
-    id: 'kisan-guidance-illustrative-c', category: 'kisan-guidance',
-    providerName: 'FasalPath Guidance Desk', hindiProviderName: 'फसलपथ मार्गदर्शन केंद्र',
-    village: 'Nagla', hindiVillage: 'नगला', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 9346271822', email: 'guidance03@example.com' },
-    details: { topics: { en: 'Seed selection, sowing calendar', hi: 'बीज चयन, बुवाई कैलेंडर' },
-      crops: { en: 'Maize, millet', hi: 'मक्का, बाजरा' },
-      description: { en: 'Pre-sowing field checklist and crop calendar planning.', hi: 'बुवाई से पहले की सूची और फसल कैलेंडर पर उदाहरण मार्गदर्शन।' },
-      consultation: { en: 'in-person consultation', hi: 'आमने-सामने परामर्श' } },
+    id: 'kisan-guidance-illustrative-c',
+    category: 'kisan-guidance',
+    providerName: 'FasalPath Guidance Desk',
+    hindiProviderName: 'फसलपथ मार्गदर्शन केंद्र',
+    village: 'Nagla',
+    hindiVillage: 'नगला',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 9346271822',
+      email: 'guidance03@example.com'
+    },
+    details: {
+      topics: {
+        en: 'Seed selection, sowing calendar',
+        hi: 'बीज चयन, बुवाई कैलेंडर'
+      },
+      crops: {
+        en: 'Maize, millet',
+        hi: 'मक्का, बाजरा'
+      },
+      description: {
+        en: 'Pre-sowing field checklist and crop calendar planning.',
+        hi: 'बुवाई से पहले की सूची और फसल कैलेंडर पर उदाहरण मार्गदर्शन।'
+      },
+      consultation: {
+        en: 'in-person consultation',
+        hi: 'आमने-सामने परामर्श'
+      }
+    }
   },
   {
-    id: 'kisan-guidance-illustrative-d', category: 'kisan-guidance',
-    providerName: 'KisanSutra Advisory', hindiProviderName: 'किसानसूत्र सलाह सेवा',
-    village: 'Bhanwada', hindiVillage: 'भनवाड़ा', available: true, isIllustrative: true,
-    contactDetails: { phone: '+91 7346271823', email: 'guidance04@example.com' },
-    details: { topics: { en: 'Organic practices, nutrient planning', hi: 'जैविक तरीके, पोषक तत्व योजना' },
-      crops: { en: 'Pulses, oilseeds', hi: 'दलहन, तिलहन' },
-      description: { en: 'Guidance on soil testing, crop rotation, and soil-friendly field practices.', hi: 'मिट्टी के अनुकूल खेती के तरीकों की उदाहरण जानकारी।' },
-      consultation: { en: 'phone consultation', hi: 'फोन परामर्श' } },
+    id: 'kisan-guidance-illustrative-d',
+    category: 'kisan-guidance',
+    providerName: 'KisanSutra Advisory',
+    hindiProviderName: 'किसानसूत्र सलाह सेवा',
+    village: 'Bhanwada',
+    hindiVillage: 'भनवाड़ा',
+    available: true,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 7346271823',
+      email: 'guidance04@example.com'
+    },
+    details: {
+      topics: {
+        en: 'Organic practices, nutrient planning',
+        hi: 'जैविक तरीके, पोषक तत्व योजना'
+      },
+      crops: {
+        en: 'Pulses, oilseeds',
+        hi: 'दलहन, तिलहन'
+      },
+      description: {
+        en: 'Guidance on soil testing, crop rotation, and soil-friendly field practices.',
+        hi: 'मिट्टी के अनुकूल खेती के तरीकों की उदाहरण जानकारी।'
+      },
+      consultation: {
+        en: 'phone consultation',
+        hi: 'फोन परामर्श'
+      }
+    }
   },
   {
-    id: 'kisan-guidance-illustrative-e', category: 'kisan-guidance',
-    providerName: 'NayiDisha Farm Advisor', hindiProviderName: 'नईदिशा कृषि सलाहकार',
-    village: 'Paachli', hindiVillage: 'पांचली', available: false, isIllustrative: true,
-    contactDetails: { phone: '+91 8346271824', email: 'guidance05@example.com' },
-    details: { topics: { en: 'Post-harvest handling, storage', hi: 'कटाई के बाद देखभाल, भंडारण' },
-      crops: { en: 'Wheat, rice, pulses', hi: 'गेहूँ, धान, दलहन' },
-      description: { en: 'Guidance on careful crop handling, drying, and storage planning.', hi: 'फसल संभालने और भंडारण योजना पर उदाहरण मार्गदर्शन।' },
-      consultation: { en: 'video consultation', hi: 'वीडियो परामर्श' } },
-  },
-]
+    id: 'kisan-guidance-illustrative-e',
+    category: 'kisan-guidance',
+    providerName: 'NayiDisha Farm Advisor',
+    hindiProviderName: 'नईदिशा कृषि सलाहकार',
+    village: 'Paachli',
+    hindiVillage: 'पांचली',
+    available: false,
+    isIllustrative: true,
+    contactDetails: {
+      phone: '+91 8346271824',
+      email: 'guidance05@example.com'
+    },
+    details: {
+      topics: {
+        en: 'Post-harvest handling, storage',
+        hi: 'कटाई के बाद देखभाल, भंडारण'
+      },
+      crops: {
+        en: 'Wheat, rice, pulses',
+        hi: 'गेहूँ, धान, दलहन'
+      },
+      description: {
+        en: 'Guidance on careful crop handling, drying, and storage planning.',
+        hi: 'फसल संभालने और भंडारण योजना पर उदाहरण मार्गदर्शन।'
+      },
+      consultation: {
+        en: 'video consultation',
+        hi: 'वीडियो परामर्श'
+      }
+    }
+  }
+];
 
-export default kisanListings
+export default kisanListings;
