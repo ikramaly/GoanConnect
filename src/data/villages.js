@@ -1,0 +1,27 @@
+const villages = [
+  { en: 'Jogiya Khera', hi: 'जोगिया खेड़ा' },
+  { en: 'Fathepur Kheri', hi: 'फतेहपुर खेरी' },
+  { en: 'Fugana', hi: 'फुगाना' },
+  { en: 'Rajpur', hi: 'राजपुर' },
+  { en: 'Chajpur', hi: 'छाजपुर' },
+  { en: 'Parasoli', hi: 'परसौली' },
+  { en: 'Joula', hi: 'जौला' },
+  { en: 'Sakhawat Gadhi', hi: 'शाखावत गढ़ी' },
+  { en: 'Loi', hi: 'लोई' },
+  { en: 'Bigana', hi: 'बिगाना' },
+  { en: 'Teekri', hi: 'टीकरी' },
+  { en: 'Bhabisa', hi: 'भविसा' },
+  { en: 'Doonger', hi: 'डुंगर' },
+  { en: 'Budhana', hi: 'बुढाना' },
+  { en: 'Kalyanpur', hi: 'कल्याणपुर' },
+  { en: 'Shahpur', hi: 'शाहपुर' },
+  { en: 'Nagla', hi: 'नगला' },
+  { en: 'Bhanwada', hi: 'भनवाड़ा' },
+  { en: 'Paachli', hi: 'पांचली' },
+  { en: 'Kahrad', hi: 'खरड़' },
+  { en: 'Harasoli', hi: 'हरसोली' },
+  { en: 'Baagpat', hi: 'बागपत' },
+  { en: 'Sohajani', hi: 'सोहजनी' },
+]
+
+export default villages
