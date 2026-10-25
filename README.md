@@ -2,6 +2,10 @@
 
 GaonConnect is a responsive web application built to help people discover local village services, farmer assistance, and community announcements through a simple and user-friendly interface.
 
+## 🌐 Live Demo
+
+**Live Website:** https://goan-connect-phi.vercel.app/
+
 ## ✨ Features
 - **Responsive UI** – Works across desktop, tablet, and mobile screens.
 - **Service Directory** – Browse local services by category.
